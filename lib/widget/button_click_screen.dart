@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 class ButtonClickScreen extends StatelessWidget {
-  const ButtonClickScreen({super.key, required this.color, required this.label});
+  const ButtonClickScreen({super.key, required this.color, required this.label,  this.icon});
 
   final Color color;
   final String label;
+  final IconData? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +23,21 @@ class ButtonClickScreen extends StatelessWidget {
         ),
         onPressed: () {},
         child:  Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Text(label,style: const TextStyle(fontSize: 20),),
+          padding: const EdgeInsets.all(5.0),
+          child: Container(
+            width: mediaquery.width*0.45,
+            child: SingleChildScrollView(
+              physics: AlwaysScrollableScrollPhysics(),
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  Icon(icon),
+                  SizedBox(width: mediaquery.width*0.02,),
+                  Text(label,style: const TextStyle(fontSize: 20),),
+                ],
+              ),
+            ),
+          ),
         ),
       ),
     );

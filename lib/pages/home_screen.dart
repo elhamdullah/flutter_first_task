@@ -45,6 +45,7 @@ class HomeScreen extends StatelessWidget {
                             style: TextStyle(
                               fontSize: mediaquery.width * 0.05,
                               fontWeight: FontWeight.bold,
+                              color: Color(0xff517ac8),
                             ),
                           ),
                           Text(
@@ -113,13 +114,14 @@ class HomeScreen extends StatelessWidget {
             SizedBox(height: mediaquery.height * 0.02,),
 
             ButtonClickScreen(
+              icon: Icons.chat_bubble_outline,
               color: Color(0xff4ab14e),
               label: "Chat with Doctor",
             ),
             SizedBox(height: mediaquery.height * 0.01,),
             ButtonClickScreen(
               color: Color(0xff205ee3),
-              label: "Book an Appointment",
+              label: "Book Appointment",
             ),
 
 
